@@ -19,7 +19,7 @@ pip install eth-brownie
 - run scripts
 
 ```console
-    brownie run scripts/deployment_v3.py --network=mainnet-fork
+brownie run scripts/deployment_v3.py --network=mainnet-fork
 ```
 **Note**
     you can use "mainnet" or "testnets" also
