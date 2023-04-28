@@ -16,6 +16,12 @@ based on [python venv documentation](https://docs.python.org/3/library/venv.html
 ```console
 pip install eth-brownie
 ```
+
+- compile interfaces
+```console
+brownie comile
+```
+
 - run scripts
 
 ```console
