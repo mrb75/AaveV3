@@ -1,0 +1,36 @@
+dependencies:
+  # - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@0.5.1
+  - OpenZeppelin/openzeppelin-contracts@4.8.0
+  - aave/aave-v3-core@1.17.2
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.5.1"
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.0"
+      - "@aave=aave/aave-v3-core@1.17.2"
+dotenv: .env
+
+
+networks:
+  goerli:
+    weth_token: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'
+    lending_pool_addresses_provider: '0xC911B590248d127aD18546B186cC6B324e99F02c'
+    dai_eth_price_feed: '0xb4c4a493AB6356497713A78FFA6c60FB53517c63'
+    dai_token: '0x326C977E6efc84E512bB9C30f76E30c160eD06FB'
+    publish_source: True
+    gas_limit: 12000000000
+  ganache-local:
+    publish_source: False
+  
+  mainnet-fork: 
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    lending_pool_addresses_provider: '0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e'
+    acl_manager_address: '0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0'
+    dai_eth_price_feed: '0x773616E4d11A78F511299002da57A0a94577F1f4'
+    dai_token: '0x6b175474e89094c44da98b954eedeac495271d0f'
+    priority_fee: "2 gwei"
+    gas_price: "60 gwei"
+
+wallets:
+  from_key: ${PRIVATE_KEY}
