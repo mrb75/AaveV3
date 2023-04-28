@@ -17,6 +17,13 @@ based on [python venv documentation](https://docs.python.org/3/library/venv.html
 pip install eth-brownie
 ```
 
+- create .env file and copy:
+```.env
+WEB3_ALCHEMY_PROJECT_ID = "your WEB3_ALCHEMY_PROJECT_ID"
+ETHERSCAN_TOKEN = "your ETHERSCAN_TOKEN"
+
+```
+
 - compile interfaces
 ```console
 brownie comile
